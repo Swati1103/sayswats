@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Sorryy Message</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1>Hey Bestiieee...💗</h1>
+        <br>
+        <h2 class="header_text">If You Lie Then The Button Will Not Respond To You Action, So Please Say The Truth Dear Bestiiieee...</h2>
+        <br>
+        <br>
+        <br>
+        <h2 class="header_text">Are You Angry With Me?</h2>
+      </div>
+      <div class="gif_container">
+        <img
+          src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtZ2JiZDR0a3lvMWF4OG8yc3p6Ymdvd3g2d245amdveDhyYmx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif"
+          alt="Cute animated illustration"
+        />
+      </div>
+      <div class="buttons">
+        <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+        <button
+          class="btn"
+          id="noButton"
+          onmouseover="moveButton()"
+          onclick="moveButton()"
+        >
+          No
+        </button>
+        <script>
+          function nextPage() {
+            window.location.href = "yes.html";
+          }
+
+          function moveButton() {
+            var noButton = document.getElementById("noButton");
+            var container = document.querySelector(".buttons");
+            var x =
+              Math.random() * (container.offsetWidth - noButton.offsetWidth);
+            var y =
+              Math.random() * (container.offsetHeight - noButton.offsetHeight);
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
